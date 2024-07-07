@@ -5,7 +5,6 @@
     <classes>
       <class name="tests.LoginPageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="AddUserTest"/>
           <include name="setUp"/>
         </methods>

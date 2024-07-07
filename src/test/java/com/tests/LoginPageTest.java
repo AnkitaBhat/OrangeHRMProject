@@ -1,4 +1,4 @@
-package tests;
+package com.tests;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.LoginPage;
-import utils.TestBase;
+import com.pages.LoginPage;
+import com.utils.TestBase;
 
 public class LoginPageTest extends TestBase {
 
@@ -37,19 +37,18 @@ public class LoginPageTest extends TestBase {
 		
 	}
 	
-	@Test(priority=1)
+	@Test(priority=2)
 	public void AddUserTest(){
-		
+		loginPage.AddEmployee(prop.getProperty("Fname"), prop.getProperty("Lname"));
 		
 		
 	}
 	
 
 	
-	 @AfterMethod 
-	 public void tearDown(){ 
-		 driver.quit(); 
-		 }
+	/*
+	 * @AfterMethod public void tearDown(){ driver.quit(); }
+	 */
 	 
 }
 
