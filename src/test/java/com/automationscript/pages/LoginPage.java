@@ -1,9 +1,11 @@
-package com.pages;
+package com.automationscript.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.utils.TestBase;
+import com.automationscript.utils.TestBase;
+
+
 
 public class LoginPage extends TestBase{
 	 

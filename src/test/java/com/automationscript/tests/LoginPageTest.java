@@ -1,15 +1,15 @@
-package com.tests;
+package com.automationscript.tests;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.pages.LoginPage;
-import com.utils.TestBase;
+import com.automationscript.pages.LoginPage;
+import com.automationscript.utils.TestBase;
+
+
 
 public class LoginPageTest extends TestBase {
 
