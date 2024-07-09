@@ -2,41 +2,37 @@ package com.automationscript.tests;
 
 import java.io.IOException;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.automationscript.pages.LoginPage;
+import com.automationscript.pages.PIMPage;
 import com.automationscript.utils.TestBase;
 
-public class LoginPageTest extends TestBase {
-
+public class PIMPageTest extends TestBase {
+	PIMPage pimPage;
 	LoginPage loginPage;
+	public PIMPageTest() {
 
-	public LoginPageTest() {
 		super();// using this it will not throw null pointer exception
 	}
 
 	@BeforeMethod
 	public void setUp() throws IOException {
-
 		initialization();
 		loginPage = new LoginPage(driver);
+		pimPage = new PIMPage(driver);
 	}
 
 	@Test(priority = 1)
-	public void loginTest() {
+	public void AddUserTest() {
 		loginPage.login(prop.getProperty("QA_userName"), prop.getProperty("QA_password"));
-		String Actual = driver.getTitle();
-		String Expected = "OrangeHRM";
-		Assert.assertEquals(Actual, Expected);
+		pimPage.AddEmployee(prop.getProperty("Fname"), prop.getProperty("Lname"));
 
 	}
 
-	@AfterMethod
-	public void tearDown() {
-		driver.quit();
-	}
+	/*
+	 * @AfterMethod public void tearDown() { driver.quit(); }
+	 */
 
 }
