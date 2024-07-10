@@ -5,8 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
+
 
 public class WebElement implements ConstantValue {
 	protected ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
