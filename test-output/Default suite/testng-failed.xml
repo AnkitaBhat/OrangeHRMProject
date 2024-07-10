@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationscript.tests.PIMPageTest">
+      <class name="com.automationScript.LoginScript">
         <methods>
-          <include name="setUp"/>
-          <include name="AddUserTest"/>
+          <include name="loginTest"/>
+          <include name="quiteBrowser"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.automationscript.tests.PIMPageTest -->
+      </class> <!-- com.automationScript.LoginScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
