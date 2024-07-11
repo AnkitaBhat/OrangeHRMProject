@@ -31,7 +31,7 @@ public  void WriteFile(String key,String value)
 
 try
 {
-prop.setProperty("Ankita", "Bhat");
+prop.setProperty(key, value);
 
 prop.store(new FileOutputStream(path), "Writing to Property File");
 System.out.println("File created");
