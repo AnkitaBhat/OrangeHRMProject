@@ -1,6 +1,7 @@
 package com.utils;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.Properties;
 
 public class ReadPropertiesFiles {
@@ -17,9 +18,33 @@ public ReadPropertiesFiles(String path) {
 }
 
 
+
 public String getValue(String key)
 {
 	return (String) prop.get(key);
 	
 }
+
+
+public  void WriteFile(String key,String value)
+{
+
+try
+{
+prop.setProperty("Ankita", "Bhat");
+
+prop.store(new FileOutputStream(path), "Writing to Property File");
+System.out.println("File created");
+}
+
+catch(Exception e)
+{
+e.getMessage();
+}
+
+}
+
+
+
+
 }
