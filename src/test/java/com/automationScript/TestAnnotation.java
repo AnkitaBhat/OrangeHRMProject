@@ -1,6 +1,5 @@
 package com.automationScript;
 
-
 import java.io.File;
 
 import org.testng.annotations.DataProvider;
@@ -10,8 +9,31 @@ import com.utils.ExcelUtility;
 
 
 
-public class LoginScript extends BaseClass{
+public class TestAnnotation {
+	/*
+	 * @Test(dataProvider ="DTest") public void test(String a, String b) {
+	 * System.out.println(a+".."+b); }
+	 * 
+	 * @DataProvider(name = "DTest") public Object[][] test1() {
+	 * 
+	 * ExcelUtility excelUtility=new ExcelUtility(null)
+	 * 
+	 * String[][] data= {{"admin","123"},{"Ankita","Ankita123"}};
+	 * 
+	 * return data;
+	 * 
+	 * }
+	 */
 	
+
+	// this will take data from dataprovider which we created
+
+	@Test(dataProvider = "testdata")
+	public void TestChrome(String uname, String password) {
+		System.out.println("user name" + uname);
+		System.out.println("Password" + password);
+	}
+
 	@DataProvider(name="testdata") 
 	public Object[][] TestDataFeed(){
 		final  String pathSeparator = File.separator;
@@ -37,12 +59,6 @@ public class LoginScript extends BaseClass{
    twitterdata[1][1]=PASSWORD2; // return arrayobject to testscript
   return twitterdata; }
 	
-	
-	@Test(dataProvider = "testdata")
-	public void loginTest(String username,String password) {
-		userableToLogin(username,password);
-	}
-	
-	
 
 }
+	

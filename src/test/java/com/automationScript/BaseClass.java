@@ -20,20 +20,15 @@ public class BaseClass extends SuperClass{
 	final static String path=System.getProperty("user.dir")+pathSeparator+"src"+pathSeparator+"main"+pathSeparator+"resources"+pathSeparator+filename;
 	
 
-		public static void main(String[] args) {
-			
-
-		
-	}
-
 	
-public void userableToLogin() {
+public void userableToLogin(String username,String password) {
 		//excel object
-	ExcelUtility reader = new ExcelUtility(path);
-	final String USERNAME = reader.getCellData("AdminSheet", "Username", 2);
-	final String PASSWORD = reader.getCellData("AdminSheet", "Password", 2);
-	System.out.println(USERNAME);
-	System.out.println(PASSWORD);
+		/*
+		 * ExcelUtility reader = new ExcelUtility(path); final String USERNAME =
+		 * reader.getCellData("AdminSheet", "Username", 2); final String PASSWORD =
+		 * reader.getCellData("AdminSheet", "Password", 2);
+		 * System.out.println(USERNAME); System.out.println(PASSWORD);
+		 */
 		//class Object
 		login=new LoginPOM(driver);
 		
@@ -42,7 +37,7 @@ public void userableToLogin() {
 		assertTrue(login.get(url));
 		
 		//Step 2: Enter the User Name and Password
-		assertTrue(login.Login(USERNAME,PASSWORD),"login");
+		assertTrue(login.Login(username,password),"login");
 		
 		
 		
